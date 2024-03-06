@@ -3,19 +3,22 @@ import { Chrono } from "react-chrono";
 
 
 const App = () => {
-    const items = [{
-      title: "May 1940",
-      cardTitle: "Dunkirk",
-      url: "http://www.history.com",
-      cardSubtitle:"Men of the British Expeditionary Force (BEF) wade out to..",
-      cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "http://someurl/image.jpg"
-        }
-      }
-    }];
+    const items = [
+      {
+        title: "circa 3200 BC",
+        cardTitle: "Cuneiform Writing",
+        url: "http://www.history.com",
+        cardSubtitle: "Cuneiform Writing in Ancient Summeria",
+        cardDetailedText:
+          "Developed by the Sumerians, this is one of the earliest known systems of writing, marking a fundamental shift in the ability to store and transmit complex information.",
+        media: {
+          type: "IMAGE",
+          source: {
+            url: "/cunieform-summerians.jpg",
+          },
+        },
+      },
+    ];
 
     return (
       <div style={{ width: "500px", height: "400px" }}>
