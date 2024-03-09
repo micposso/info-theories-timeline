@@ -1,99 +1,35 @@
+import { Typography } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import items from "./data/data";
 import { Chrono } from "react-chrono";
-
+import "./index.css";
 
 const App = () => {
-    const items = [ 
-      {
-        title: "Cuneiform Writing",
-        cardTitle: "Circa 3200 BC Summeria",
-        cardDetailedText:
-          "Developed by the Sumerians, this is one of the earliest known systems of writing, marking a fundamental shift in the ability to store and transmit complex information.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/cunieform-summerians.jpg",
-          },
-        },
-      },
-      {
-        title: "Hieroglyphics",
-        cardTitle: "Circa 3200 BC Egypt",
-        cardDetailedText:
-          "The ancient Egyptians utilized this pictographic script for communication, embedding rich cultural narratives within their symbols.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/Hieroglyphics.png",
-          },
-        },
-      },
-      {
-        title: "African Talking Drums",
-        cardTitle: "Ancient Africa",
-        cardDetailedText:
-          "These drums communicated complex messages over long distances by mimicking the tones of human speech, showcasing early sophisticated auditory encoding systems outside the written paradigm.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/Hieroglyphics.png",
-          },
-        },
-      },
-      {
-        title: "Hieroglyphics",
-        cardTitle: "Circa 3200 BC Egypt",
-        cardDetailedText:
-          "The ancient Egyptians utilized this pictographic script for communication, embedding rich cultural narratives within their symbols.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/Hieroglyphics.png",
-          },
-        },
-      },
-      {
-        title: "Hieroglyphics",
-        cardTitle: "Circa 3200 BC Egypt",
-        cardDetailedText:
-          "The ancient Egyptians utilized this pictographic script for communication, embedding rich cultural narratives within their symbols.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/Hieroglyphics.png",
-          },
-        },
-      },
-      {
-        title: "Hieroglyphics",
-        cardTitle: "Circa 3200 BC Egypt",
-        cardDetailedText:
-          "The ancient Egyptians utilized this pictographic script for communication, embedding rich cultural narratives within their symbols.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/Hieroglyphics.png",
-          },
-        },
-      },
-      {
-        title: "Hieroglyphics",
-        cardTitle: "Circa 3200 BC Egypt",
-        cardDetailedText:
-          "The ancient Egyptians utilized this pictographic script for communication, embedding rich cultural narratives within their symbols.",
-        media: {
-          type: "IMAGE",
-          source: {
-            url: "/Hieroglyphics.png",
-          },
-        },
-      },
-    ];
-
-    return (
-      <div>
-        <Chrono items={items} mode="HORIZONTAL" itemWidth={150} showSingle />{" "}
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Typography variant="h1" sx={{ margin: "20px" }}>
+            Timeline of Information Technologies
+          </Typography>
+          <div style={{ width: "95%" }}>
+            <Chrono
+              items={items}
+              mode="HORIZONTAL"
+              showAllCardsHorizontal
+              cardWidth={450}
+              cardHeight={300}
+              contentDetailsHeight={100}
+              fontSizes={{
+                title: "1rem",
+              }}
+              slideShow
+            />
+          </div>
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
 
 export default App;
